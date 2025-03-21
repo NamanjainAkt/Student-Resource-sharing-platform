@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Resource Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Student Resource Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="http://localhost:5173/">Ai summaizer</a></li>
+                <li><button id="loginBtn">Login</button></li>
+                <li><button id="registerBtn">Register</button></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <h2>Share Your Resource</h2>
+            <form id="uploadForm">
+                <input type="text" id="resourceTitle" placeholder="Resource title" required>
+                <input type="file" id="resourceFile" accept=".pdf,.doc,.docx,.txt" required>
+                <textarea id="resourceDesc" placeholder="Description" required></textarea>
+                <button type="submit">Upload Resource</button>
+            </form>
+        </section>
+
+        <section class="resources-grid" id="resourcesContainer">
+            <!-- Dynamic content will be loaded here -->
+        </section>
+
+
+    </main>
+
+    <!-- Auth Modals -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="loginUsername" placeholder="Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" id="regUsername" placeholder="Username" required>
+                <input type="password" id="regPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
